@@ -1,0 +1,39 @@
+[
+	{
+		"id": "vuln-scanner",
+		"name": "Vulnerability Scanner",
+		"description": "Scan assets and services for known CVEs and misconfigurations.",
+		"owner": "AppSec",
+		"tags": ["scanning", "cves", "appsec"],
+		"url": "https://security.example.com/vuln-scanner",
+		"docs": "https://docs.example.com/vuln-scanner"
+	},
+	{
+		"id": "secrets-dlp",
+		"name": "Secrets DLP",
+		"description": "Real-time detection of secrets in code and logs.",
+		"owner": "Detection & Response",
+		"tags": ["dlp", "secrets", "sdlc"],
+		"url": "https://security.example.com/secrets-dlp",
+		"docs": "https://docs.example.com/secrets-dlp"
+	},
+	{
+		"id": "iam-portal",
+		"name": "IAM Portal",
+		"description": "Request and review access to production systems.",
+		"owner": "IAM",
+		"tags": ["iam", "access", "governance"],
+		"url": "https://security.example.com/iam-portal",
+		"docs": "https://docs.example.com/iam-portal"
+	},
+	{
+		"id": "bug-bounty",
+		"name": "Bug Bounty",
+		"description": "Submit and track vulnerabilities from the community program.",
+		"owner": "Vuln Mgmt",
+		"tags": ["vulns", "triage", "program"],
+		"url": "https://security.example.com/bug-bounty",
+		"docs": "https://docs.example.com/bug-bounty"
+	}
+]
+

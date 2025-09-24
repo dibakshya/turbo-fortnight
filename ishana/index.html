@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ishana - InfoSec Tools Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar">
+        <div class="brand">Ishana</div>
+        <nav>
+          <button class="nav-btn" data-view="tools">Tools Directory</button>
+          <button class="nav-btn" data-view="metrics">Metrics Dashboard</button>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <input id="search" type="search" placeholder="Search tools..." />
+          <div class="actions">
+            <button id="themeToggle" title="Toggle theme">🌓</button>
+          </div>
+        </header>
+
+        <section id="view-tools" class="view active">
+          <div class="filters">
+            <div id="tagFilters" class="tags"></div>
+          </div>
+          <div id="toolsGrid" class="grid"></div>
+        </section>
+
+        <section id="view-metrics" class="view">
+          <div class="cards">
+            <div class="card">
+              <h3>Total Tools</h3>
+              <div id="metricTotalTools" class="metric">-</div>
+            </div>
+            <div class="card">
+              <h3>Monthly Active Users</h3>
+              <div id="metricMau" class="metric">-</div>
+            </div>
+            <div class="card">
+              <h3>Requests (24h)</h3>
+              <div id="metricRequests" class="metric">-</div>
+            </div>
+          </div>
+          <div class="charts">
+            <div class="chart-card">
+              <h3>Usage by Tool</h3>
+              <canvas id="chartUsageByTool" width="600" height="300"></canvas>
+            </div>
+            <div class="chart-card">
+              <h3>Requests Over Time</h3>
+              <canvas id="chartRequestsOverTime" width="600" height="300"></canvas>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+  </html>
+
