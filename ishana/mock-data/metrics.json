@@ -1,0 +1,20 @@
+{
+	"totalTools": 24,
+	"mau": 1835,
+	"requests24h": 58210,
+	"usageByTool": [
+		{ "name": "Vuln Scanner", "value": 420 },
+		{ "name": "Secrets DLP", "value": 310 },
+		{ "name": "IAM Portal", "value": 560 },
+		{ "name": "Bug Bounty", "value": 120 }
+	],
+	"requestsOverTime": [
+		{ "t": "00:00", "v": 1200 },
+		{ "t": "04:00", "v": 2100 },
+		{ "t": "08:00", "v": 6000 },
+		{ "t": "12:00", "v": 8200 },
+		{ "t": "16:00", "v": 9100 },
+		{ "t": "20:00", "v": 6700 }
+	]
+}
+
