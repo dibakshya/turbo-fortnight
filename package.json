@@ -1,0 +1,10 @@
+{
+  "name": "flipkart-incident-response-copilot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo for Flipkart Incident Response Copilot tool",
+  "scripts": {
+    "install:all": "pnpm install --filter ./...",
+    "dev": "pnpm --recursive --parallel run dev"
+  }
+}

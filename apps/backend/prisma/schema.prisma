@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Playbook {
+  id          String         @id @default(cuid())
+  name        String
+  description String
+  steps       PlaybookStep[]
+  incidents   Incident[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model PlaybookStep {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  order       Int
+  playbookId  String
+  playbook    Playbook @relation(fields: [playbookId], references: [id])
+  incidentSteps IncidentStep[]
+}
+
+model Incident {
+  id          String         @id @default(cuid())
+  playbookId  String
+  title       String
+  status      String         @default("ACTIVE")
+  startedAt   DateTime       @default(now())
+  completedAt DateTime?
+  playbook    Playbook       @relation(fields: [playbookId], references: [id])
+  steps       IncidentStep[]
+}
+
+model IncidentStep {
+  id           String                @id @default(cuid())
+  incidentId   String
+  playbookStep PlaybookStep          @relation(fields: [playbookStepId], references: [id])
+  playbookStepId String
+  status       String                @default("PENDING")
+  assignee     String?
+  startedAt    DateTime?
+  completedAt  DateTime?
+  incident     Incident              @relation(fields: [incidentId], references: [id])
+}

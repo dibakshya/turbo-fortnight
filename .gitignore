@@ -1,0 +1,11 @@
+node_modules
+.pnpm-store
+dist
+build
+.DS_Store
+*.log
+tmp
+.env
+.env.*
+apps/backend/dev.db
+apps/backend/prisma/migrations/*.db-journal
